@@ -370,6 +370,7 @@ if acompanhou == True:
                 key.getchar()
                 tentativa02 = tentativa02 + 1
         elif enigma02 == "2":
+            tentativa02 = tentativa02 + 3
             acertou02 = False
     key.getchar()
 
@@ -392,7 +393,7 @@ if acompanhou == True:
 respostaCerta03 = "140"
 if acompanhou == False:
     print("\nAo chegar no escritório, já sinto que algo está errado. Tudo parece estar perfeitamente em seu lugar, menos um vaso de flores. Ao me virar, noto um cofre na parede. Qual será a senha?")
-    certo06 = False
+    certo09 = False
     while certo09 == False:
         escolha09 = input(
             "1) Investigar estante de livros \n2) Investigar gavetas do arquivo\n3) Investigar porta joias da escrivaninha\n4) Investigar o vaso de flores\n")
@@ -410,6 +411,7 @@ if acompanhou == False:
             key.getchar()
             print("\nJá sei a senha!")
             key.getchar()
+            resposta03 = 0
             while resposta03 != respostaCerta03:
                 print("\n1) 30\n2) 50\n3) 80\n4) 140")
                 resposta03 = input("Insira a senha correta:\n")
@@ -444,6 +446,7 @@ key.getchar()
 print("\n- Bonjour! Comment puis-je t'aider?")
 key.getchar()
 
+certo10 = False
 while certo10 == False:
     escolha10 = input(
         "1) Ele não fala nosso idioma?\n2) Permanecer em silêncio\n")
@@ -516,4 +519,332 @@ key.getchar()
 print("\n- Sim, podemos?")
 key.getchar()
 print("\n- Pra já. Seu amigo pode esperar aqui enquanto interrogamos ele. Fica a vontade, tem água e comida ali caso queira.")
+key.getchar()
+print("\nEnquanto espero, ouço dois homens conversando.")
+key.getchar()
+print("\n- Será que encontraram o suspeito mesmo? Não é possível que seja o sapateiro, eu conhecia o pai dele, ele não criaria um filho assim.")
+key.getchar()
+print("\n- Não mesmo, mas sinto pena do general, não só foi assassinado mas se afogou com o próprio sangue enquanto morria.")
+key.getchar()
+print("\n- Pois é, o tiro ter acertado o pulmão esquerdo foi um azar, sofreu até o último segundo.")
+key.getchar()
+print("\n- Pois é, uma pena, mas onde o senhor vai agora doutor?")
+key.getchar()
+print("\n- Vou terminar a autópsia no corpo do general, tem mais algumas coisas que eu queria confirmar antes de entregá-lo à família.")
+key.getchar()
+
+capturado = False
+if confiarNikolai <= 10:
+    print("\nNikolai disse que o ângulo do tiro foi do lado direito. Nunca acertaria o pulmão esquerdo dessa forma.")
+    certo11 = False
+    while certo11 == False:
+        escolha11 = input(
+            "1) Seguir o doutor\n2) Ignorar\n")
+        if escolha11 == "1":
+            certo11 = True
+            print(
+                "\nSaio discretamente da sala e sigo o doutor até a sala de autópsia. Entro sem ser percebido.")
+            certo12 = False
+            while certo12 == False:
+                escolha12 = input(
+                    "1) Conversar com o doutor\n2) Esperar ele ir embora e investigar\n")
+                if escolha12 == "1":
+                    certo12 = True
+                    print("\n- Hm… olá?")
+                    key.getchar()
+                    print("\n- Quem é você? O que está fazendo aqui?")
+                    key.getchar()
+                    print(
+                        "\n- Estou ajudando Nikolai com a investigação da morte do general.")
+                    key.getchar()
+                    print(
+                        "\n- Ah, então quer dizer que aquele mau caráter está enganando outro agora?")
+                    key.getchar()
+                    print("\n- Como assim?")
+                    key.getchar()
+                    print("\n- Todos que se relacionam com esse sujeito somem sem motivo algum, mas ninguém questiona, pois esses bolinhas ficam ao seu lado. Sempre busquei provas, mas nunca consegui encontrar algo. Principalmente pelo o que ele fez com a Yelena. ")
+                    key.getchar()
+                    print("\n- Quem seria essa?")
+                    key.getchar()
+                    print("\n- Uma mulher que ele era apaixonado. Ela sempre aparecia estranha, com medo. Ela conseguiu fugir, com sorte. Dizem que o Duque Dookan está ajudando ela.")
+                    key.getchar()
+                    print(
+                        "\n- Duque Dookan? Não. Ele sequestrou Yelena, ela é filha de Nikolai. Ele está tentando salvar ela.")
+                    key.getchar()
+                    print("\n- Então é isso que ele diz? Que piada boa. Claro que ela é muito mais nova, mas filha? Seria um relacionamento fraternal muito dos errados então. Pelo jeito ele já fez sua cabeça.")
+                    key.getchar()
+                    print("\nDe repente, um alarme de emergência toca pela delegacia.")
+                    key.getchar()
+                    print("\n- Alarme de criminoso à solta? Por quê? - diz o doutor.")
+                    key.getchar()
+                    print(
+                        "\nA porta abre com força. O delegado e Nikolai entram e correm até mim. ")
+                    key.getchar()
+                    print(
+                        "\n- O filho do sapateiro nos falou tudo. Você está preso sobre suspeita do assassinato do general!")
+                    capturado = True
+                elif escolha12 == "2":
+                    print("\nEu espero pacientemente o doutor ir embora, mas ele não aparenta estar terminando seu trabalho tão cedo. Alguns minutos se passam e um alarme de emergência toca pela delegacia e o doutor sai da sala para ver do que se trata. Essa é minha chance. ")
+                    key.getchar()
+                    certo13 = False
+                    while certo13 == False:
+                        escolha13 = input(
+                            "1) Ir até o corpo\n2)Esperar um pouco mais \n")
+                        if escolha13 == "1":
+                            certo12 = True
+                            certo13 = True
+                            print(
+                                "\nVou até o corpo e realmente o tiro foi dado no lado esquerdo. Nikolai realmente mentiu.")
+                            key.getchar()
+                            print(
+                                "\nDe repente, a porta é aberta pelo Doutor e Nikolai.")
+                            key.getchar()
+                            print("\n- Ele está tentando sumir com o corpo!")
+                            key.getchar()
+                            print("\n- N-não é o que parece…")
+                            key.getchar()
+                            print(
+                                "\n- O filho do sapateiro nos falou tudo. Você está preso sobre suspeita do assassinato do general!")
+                            capturado = True
+                            break
+                        elif escolha13 == "2":
+                            certo13 = True
+                            print(
+                                "\nEu ouço um barulho no corredor e decido ficar escondido um pouco mais. De repente, a porta se abre e ouço duas vozes:")
+                            key.getchar()
+                            print("\n- Ele deve estar aqui. Precisamos prendê-lo. ")
+                            key.getchar()
+                            print("\nÉ a voz de Nikolai. ")
+                            key.getchar()
+                            print(
+                                "\n- O filho do sapateiro não estava mentindo. Esse cara realmente é perigoso.")
+                            key.getchar()
+                            print("\nEspera, eles estão atrás de mim?")
+                            key.getchar()
+                            print(
+                                "\nEles vão embora e decido fugir dali. Preciso de um esconderijo e ajuda.")
+                            key.getchar()
+                            certo14 = False
+                            while certo14 == False:
+                                escolha14 = input(
+                                    "1) Ir para o escritório do general\n2) Ir para a biblioteca de Alberanski\n")
+                                if escolha14 == "1":
+                                    certo12 = True
+                                    certo14 = True
+                                    print(
+                                        "\nChegando até lá percebo que está tudo cercado. ")
+                                    key.getchar()
+                                    print("\n- Ali, ele está ali!")
+                                    key.getchar()
+                                    print(
+                                        "\nTento fugir, mas conseguem me capturar.")
+                                    key.getchar()
+                                    print(
+                                        "\n- Você está preso em flagrante sobre suspeita do assassinato do general!")
+                                    key.getchar()
+                                    capturado = True
+                                elif escolha14 == "2":
+                                    certo12 = True
+                                    certo14 = True
+                                    print(
+                                        "\nChego até a biblioteca de Alberanski e vejo as luzes acesas. Bato na porta e rapidamente ele abre.")
+                                    key.getchar()
+                                    print(
+                                        "\n- Estava esperando por você. Sabia que não me decepcionaria. ")
+                                    key.getchar()
+                                    print("\n- Estão me incriminado.")
+                                    key.getchar()
+                                    print(
+                                        "\n- Eu já sei. Venha, eu posso te ajudar. O General já desconfiava disso tudo, então me deixou provas, preciso da sua habilidade. ")
+                                    key.getchar()
+                                    print("\n- Como assim ele já sabia?")
+                                    key.getchar()
+                                    print(
+                                        "\n- Pois é, ele era um infiltrado. Você tem muitos inimigos, sabia? Era para você estar morto, ele te salvou. ")
+                                    key.getchar()
+                                    print(
+                                        "\nAlberanski me entrega uma caixa trancada. ")
+                                    key.getchar()
+                                    print(
+                                        "\n- Os papéis estão aqui dentro. Faça sua mágica. É um código.")
+                                    key.getchar()
+                                    print("\nCódigo: .--. . --. ---")
+                                    key.getchar()
+
+                                    tentativa03 = 0
+                                    respostaCerta03 = "Pego"
+                                    acertou03 = False
+                                    while tentativa03 < 3:
+                                        enigma03 = input(
+                                            "1) Eu decifrei o código\n2) Não faço a mínima ideia.\n")
+                                        if enigma03 == "1":
+                                            resposta03 = input(
+                                                "Insira o código decifrado:\n")
+                                            if resposta03 == respostaCerta03:
+                                                print(
+                                                    "\nAs provas estavam todas lá. Os seus planos, planejava matar não só a mim como várias outras pessoas importantes. A ideia do poder subiu à cabeça. Ele tinha muitos contatos na polícia, e seus nomes estavam ali também.")
+                                                key.getchar()
+                                                print(
+                                                    "\nEstava escrito: confie apenas no Markos.")
+                                                key.getchar()
+                                                print(
+                                                    "\n- Preciso falar com Markos. Me ajude, Alberanski!")
+                                                key.getchar()
+                                                print(
+                                                    "\n- Claro, vou procurar ele. Fique aqui")
+                                                key.getchar()
+                                                print(
+                                                    "\nMeia hora depois, Alberanski aparece com Markos. Conto tudo o que aconteceu e entrego todas as provas.")
+                                                key.getchar()
+                                                print(
+                                                    "\n- Uau, nunca esperava algo assim. Fique aqui até que eu resolva isso. Vai demorar alguns dias, tenho que pegá-los de surpresa. ")
+                                                key.getchar()
+                                                print("\nAlguns dias depois foi anunciada a prisão de Nikolai e o chefe de polícia, Markos conseguiu evidências suficientes para provar a culpa de ambos sobre o assassinato do general, porém após todos os ocorridos eu não estava seguro, alguns companheiros de Nikolai poderiam tentar me caçar, com isso Markos e Alberanski me ajudaram a recomeçar uma nova vida na Alemanha, espero que dê tudo certo")
+                                                key.getchar()
+                                                acertou03 = True
+                                                break
+                                            elif resposta03 != respostaCerta03:
+                                                print(
+                                                    "\nEssa não é a resposta correta, estou ficando sem tempo...")
+                                                key.getchar()
+                                                tentativa03 = tentativa03 + 1
+                                        elif enigma03 == "2":
+                                            tentativa03 = tentativa03 + 3
+                                            acertou03 = False
+                                    key.getchar()
+                                    if acertou03 == False:
+                                        print("\n- Não consegui, fracassei.")
+                                        key.getchar()
+                                        print(
+                                            "\n- Desculpa por isso. Bem, o que resta agora é fugir. Tenho alguns contatos se você quiser.")
+                                        key.getchar()
+                                        print("\n- Claro, obrigado")
+                                        key.getchar()
+                                        print("\nPassei alguns dias escondido na biblioteca de Alberanski enquanto ele falava com seus contatos, com isso consegui documentos novos para começar uma nova vida na Alemanha, porém com toda a polícia e os contatos de Nikolai atras de mim a fuga foi no mínimo conturbada, mas no fim consegui chegar ao meu destino, mas infelizmente não posso dizer o mesmo de Alberanski que acabou sendo baleado na travessia da fronteira com a França")
+                                        key.getchar()
+                                        break
+                    key.getchar()
+        elif escolha11 == "2":
+            confiarNikolai = confiarNikolai + 20
+            key.getchar()
+key.getchar()
+
+if confiarNikolai > 10:
+    print("\nContinuo esperando na sala por vários minutos até que um alarme de emergência começa a tocar. O que será que está acontecendo?")
+    key.getchar()
+    print("\nO Delegado e Nikolai entram de repente e correm em minha direção.")
+    key.getchar()
+    print("\n- Ei, o que está acontecendo?")
+    key.getchar()
+    print("\n- O filho do sapateiro nos falou tudo. Você está preso sobre suspeita do assassinato do general!")
+    key.getchar()
+    capturado = True
+
+if capturado == True:
+    print("\n26 de dezembro de 1918\n4 dias depois\nSala do interrogatório\n")
+    key.getchar()
+    print("\n- Acho melhor você confessar logo que é o trabalho para poupar nosso tempo.")
+    key.getchar()
+    print("\n- Não sou o culpado. Já disse isso. Não tem nem provas contra mim, só a palavra de um alfaiate.")
+    key.getchar()
+    if incriminado == True:
+        print("\n- Mas sabe uma prova que com certeza prova o culpado? ISSO!")
+        key.getchar()
+        print("\nEle joga um relógio na mesa. Meu relógio. Como ele estava ali? Se bem que… fazia tempo que não via ele, talvez desde… Nikolai!")
+        key.getchar()
+        print("\n- O sapateiro nos revelou que você contratou ele na noite do assassinato e como garantia que ele não seria preso, você entregou o seu relógio. Como você explica isso?")
+        key.getchar()
+        print("\n- Isso é um absurdo, eu estava com ele esses dias atrás, mesmo depois do assassinato.")
+        key.getchar()
+        print("\n- Você tem como provar isso?")
+        key.getchar()
+        print("\n- Não…")
+        key.getchar()
+        print("\n- Então é isso, camarada. Você era o único na cena do crime, seu relógio estava com o atirador e temos a palavra dele e do Nikolai")
+        key.getchar()
+        print("\n- Nikolai? Como assim? Eu estava ajudando ele.")
+        key.getchar()
+        print("\n- Obra de mestre né? Claro que ele pediu sua ajuda só para ficar perto e você caiu direitinho. Bem, não vou estender o assunto. Vamos levar você de volta para a cela e logo logo não estará mais aqui.")
+        key.getchar()
+        print("\nSem muitas opções fui culpado pelo assassinato do general e a data de meu julgamento foi marcada.")
+        key.getchar()
+        print("\nNo dia do julgamento meu advogado de defesa era um dos contatos de Nikolai, o julgamento foi totalmente parcial e unidirecional, recebi a pena de morte")
+        key.getchar()
+        print("\nCom isso apenas me resta esperar a data da execução, jamais esperei ser traido dessa forma, mas é o que dizem, mantenha os amigos próximos e os inimigos mais próximos ainda, Nikolai pelo visto seguiu esse ditado a risca")
+        key.getchar()
+    if incriminado == False:
+        print("\n- Ok. Você não vai admitir. Então, vamos a julgamento. Você terá direito a um advogado. E tem uma pessoa ali fora doida para te ver.")
+        key.getchar()
+        print("\nPassa algum tempo e vejo Alberanski entrando.")
+        key.getchar()
+        print("\n- Você, graças a Deus. Me ajude, por favor!")
+        key.getchar()
+        print("\n- Ei calma. Vou te ajudar. O General já desconfiava disso tudo, então me deixou provas, preciso da sua habilidade. ")
+        key.getchar()
+        print("\n- Como assim ele já sabia?")
+        key.getchar()
+        print("\n- Pois é, ele era um infiltrado. Você tem muitos inimigos, sabia? Era para você estar morto, ele te salvou. ")
+        key.getchar()
+        print("\nAlberanski me entrega escondido uma caixa trancada. ")
+        key.getchar()
+        print("\n- Os papéis estão aqui dentro. Faça sua mágica. É um código.")
+        key.getchar()
+        print("\nCódigo: .--. . --. ---")
+        key.getchar()
+        tentativa04 = 0
+        respostaCerta04 = "Pego"
+        acertou04 = False
+        while tentativa04 < 3:
+            enigma04 = input(
+                "1) Eu decifrei o código\n2) Não faço a mínima ideia.\n")
+            if enigma04 == "1":
+                resposta04 = input("Insira o código decifrado:\n")
+                if resposta04 == respostaCerta04:
+                    print("\n- Consegui!")
+                    key.getchar()
+                    print("\nAs provas estavam todas lá. Os seus planos, planejava matar não só a mim como várias outras pessoas importantes. A ideia do poder subiu à cabeça. Ele tinha muitos contatos na polícia, e seus nomes estavam ali também.")
+                    key.getchar()
+                    print("\nEstava escrito: confie apenas no Markos.")
+                    key.getchar()
+                    print("\n- Preciso falar com Markos. Me ajude, Alberanski!")
+                    key.getchar()
+                    print("\n- Claro, vou procurar ele. Fique aqui")
+                    key.getchar()
+                    print(
+                        "\nMeia hora depois, Alberanski aparece com Markos. Conto tudo o que aconteceu e entrego todas as provas.")
+                    key.getchar()
+                    print("\n- Uau, nunca esperava algo assim. Fique aqui até que eu resolvo isso. Vai demorar alguns dias, tenho que pegá-los de surpresa. Enquanto isso, volte para a cela e finja que nada disso aconteceu. ")
+                    key.getchar()
+                    print("\nAlguns dias depois foi anunciada a prisão de Nikolai e o chefe de polícia, Markos conseguiu evidências suficientes para provar a culpa de ambos sobre o assassinato do general, após todos os ocorridos eu fui inocentado, porém não estava seguro, alguns companheiros de Nikolai poderiam tentar me caçar, com isso Markos e Alberanski me ajudaram a recomeçar uma nova vida na Alemanha, espero que dê tudo certo")
+                    key.getchar()
+                    acertou04 = True
+                    break
+                elif resposta04 != respostaCerta04:
+                    print("\nEssa não é a resposta correta, estou ficando sem tempo...")
+                    key.getchar()
+                    tentativa04 = tentativa04 + 1
+            elif enigma04 == "2":
+                tentativa04 = tentativa04 + 3
+                acertou04 = False
+        key.getchar()
+        if acertou04 == False:
+            print("\n- Não consegui, fracassei.")
+            key.getchar()
+            print("\n- Desculpa meu amigo, isso era tudo o que eu tinha")
+            key.getchar()
+            print(
+                "\nAlberanski vai embora. Sou levado para a cela. Não há mais nada o que posso fazer. ")
+            key.getchar()
+            print("\nSem muitas opções fui culpado pelo assassinato do general e a data de meu julgamento foi marcada.")
+            key.getchar()
+            print("\nNo dia do julgamento meu advogado de defesa era Alberanski, ele argumentou de forma engenhosa e criativa em meu favor, mas todo o juri havia sido comprado por Nikolai, com isso o máximo que Alberanski conseguiu foi trocar a pena de morte pela prisão perpétua")
+            key.getchar()
+            print("\nMe despedi de Alberanski e com isso começarei meu primeiro dia na prisão, o primeiro de muitos...")
+            key.getchar()
+key.getchar()
+
+print("\nFIM!")
+key.getchar()
+print("\nPARABÉNS " + nome + " VOCÊ FINALIZOU O JOGO!")
+key.getchar()
 key.getchar()
